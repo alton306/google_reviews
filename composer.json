@@ -1,0 +1,28 @@
+{
+    "name": "fluidideas/google_reviews_extension",
+    "description": "Module extends the google reviews module to provide reviews on a per home basis and better controll on what is displayed",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Ryan",
+            "role": "Lead Backend Developer"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "path",
+            "url": "docroot/modules/custom/google_reviews_extension"
+        }
+    ],
+    "require": {
+        "drupal/googlereviews": "1.1.2"
+    }
+
+
+
+}

@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Google Reviews Extension module.
+ *
+ * @DCG
+ * This file is no longer required in Drupal 8.
+ * @see https://www.drupal.org/node/2217931
+ */
+
+function google_reviews_extension_cron()
+{
+  $node_storge = \Drupal::entityTypeManager()->getStorage('node');
+  $google_reviews_service = \Drupal::service('google_reviews_extension.get_google_data_per_location');
+  $node_reviews_data  = $google_reviews_service->getGoogleReviews([], 5, 'newest', '');
+  foreach ($node_reviews_data as $entity_id => $reviews_Data) {
+    foreach ($reviews_Data as $review) {
+      $node_exists = \Drupal::entityTypeManager()->getStorage('node')->loadByProperties([
+        "type" => "google_reviews",
+        "field_author_url" => $review["author_url"],
+        "field_node_reference" => $entity_id,
+      ]);
+      
+      if (!$node_exists) {
+        $node = $node_storge->create([
+          "type" => "google_reviews",
+          "title" => $review["author_name"],
+          "body" => $review["text"],
+          "field_author_url" => $review["author_url"],
+          "field_profile_url" => $review["profile_photo_url"],
+          "field_review_created" => $review["time"],
+          "field_review_score" => $review["rating"],
+          "field_node_reference" => $entity_id,
+          "status" => 0,
+        ]);
+
+        $node->save();
+      }
+    }
+  }
+}

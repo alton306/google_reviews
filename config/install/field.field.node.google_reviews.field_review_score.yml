@@ -1,0 +1,27 @@
+uuid: 8c5dcc5b-2339-4271-acf0-1f922a27ac3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_review_score
+    - node.type.google_reviews
+  module:
+    - google_reviews_extension
+  enforced:
+    - google_reviews_extension
+id: node.google_reviews.field_review_score
+field_name: field_review_score
+entity_type: node
+bundle: google_reviews
+label: 'Review score'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: 5
+  prefix: ''
+  suffix: ''
+field_type: integer

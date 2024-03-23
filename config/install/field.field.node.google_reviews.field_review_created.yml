@@ -1,0 +1,25 @@
+uuid: fc4660a9-09ab-4427-a7a9-543b318a45a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_review_created
+    - node.type.google_reviews
+  module:
+    - google_reviews_extension
+  enforced:
+    - google_reviews_extension
+id: node.google_reviews.field_review_created
+field_name: field_review_created
+entity_type: node
+bundle: google_reviews
+label: 'Review created'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1707922882
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

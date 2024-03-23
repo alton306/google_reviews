@@ -1,0 +1,22 @@
+uuid: 8b0dd52d-fa8c-474c-8ad0-34a0a006bed0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+    - google_reviews_extension
+  enforced:
+    - google_reviews_extension
+id: node.field_node_reference_summary
+field_name: field_node_reference_summary
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

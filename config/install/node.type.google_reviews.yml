@@ -1,0 +1,21 @@
+uuid: 4bbfd9e0-7d46-4625-80b1-192953c01d8d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - google_reviews_extension
+  enforced:
+    - google_reviews_extension
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Google Reviews'
+type: google_reviews
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

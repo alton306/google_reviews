@@ -1,0 +1,22 @@
+uuid: fa556a12-5532-475f-bb43-515ead684f51
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.google_reviews
+  enforced:
+    - google_reviews_extension
+  module:
+    - google_reviews_extension
+id: node.google_reviews.title
+field_name: title
+entity_type: node
+bundle: google_reviews
+label: 'Reviewer Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

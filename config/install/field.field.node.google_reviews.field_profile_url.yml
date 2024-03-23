@@ -1,0 +1,23 @@
+uuid: 3fa69626-4a0e-40be-aac0-547a9c6ff037
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_profile_url
+    - node.type.google_reviews
+  module:
+    - google_reviews_extension
+  enforced:
+    - google_reviews_extension
+id: node.google_reviews.field_profile_url
+field_name: field_profile_url
+entity_type: node
+bundle: google_reviews
+label: 'Profile URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

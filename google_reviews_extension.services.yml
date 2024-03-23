@@ -1,0 +1,4 @@
+services:
+  google_reviews_extension.get_google_data_per_location:
+    class: Drupal\google_reviews_extension\GetGoogleDataPerLocation
+    arguments: ['@http_client', '@logger.factory', '@messenger', '@config.factory', '@language_manager', '@url_generator', '@string_translation']

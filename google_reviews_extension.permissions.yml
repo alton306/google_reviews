@@ -1,0 +1,4 @@
+administer google_reviews_extension configuration:
+  title: 'Administer google_reviews_extension configuration'
+  description: 'Optional description.'
+  restrict access: true

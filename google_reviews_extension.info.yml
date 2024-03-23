@@ -1,0 +1,8 @@
+name: Google Reviews Extension
+type: module
+description: This module is to extend the current google reviews module and set it up to work with individual homes instead of singular locations
+package: Custom
+core: 8.x
+core_version_requirement: ^8 || ^9 || ^10
+dependencies:
+  - drupal:googlereviews

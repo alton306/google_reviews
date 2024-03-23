@@ -1,0 +1,11 @@
+# Default value.
+field.value.google_reviews_extension_places_api_id:
+  type: mapping
+  label: Default value
+  mapping:
+    places_id:
+      type: string
+      label: Places Id
+    display_review_score:
+      type: boolean
+      label: display review score
